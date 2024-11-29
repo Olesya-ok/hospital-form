@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper-container">
+    <div class="wrapper">
+        <header class="header">
+            <h1>Записатись на прийом</h1>
+            <p>Оформлення заявки</p>
+        </header>
+
+        <main class="main">
+            <form id="bid" action="#" method="get">
+                <!-- Прізвище -->
+                <div class="bid-lastname">
+                    <label for="lastname">Прізвище</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Введіть своє прізвище" required>
+                </div>
+
+                <!-- Ім'я -->
+                <div class="bid-firstname">
+                    <label for="firstname">Ім'я</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Введіть своє ім'я" required>
+                </div>
+
+                <!-- Побатькові -->
+                <div class="bid-surname">
+                    <label for="surname">Побатькові</label>
+                    <input type="text" id="surname" name="surname" placeholder="Введіть своє побатькові">
+                </div>
+
+                <!-- Стать -->
+                <div class="data">
+                    <div class="genus">
+                        <label for="genus">Стать</label>
+                        <select name="gender" id="genus" required>
+                            <option name="gender" value="male">Чоловіча</option>
+                            <option name="gender" value="female">Жіноча</option>
+                        </select>
+
+                    </div>
+
+                    <!-- Дата народження -->
+                    <div class="birthdate">
+                        <label for="birthdate">Дата народження</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                </div>
+
+                <!-- Оберіть лікаря -->
+                <div class="service">
+                    <label for="doctor">Оберіть лікаря</label>
+                    <select name="doctor" id="doctor" required>
+                        <option value="neurologist">Невропатолог</option>
+                        <option value="surgeon">Хірург</option>
+                        <option value="lor">ЛОР</option>
+                        <option value="therapist">Терапевт</option>
+                        <option value="cardiologist">Кардіолог</option>
+                        <option value="ophthalmologist">Окуліст</option>
+                    </select>
+                </div>
+
+                <!-- Дата та час прийому -->
+                <div class="datevisit">
+                    <label for="visitDateTime">Дата та час прийому</label>
+                    <input type="datetime-local" id="visitDateTime" name="visitDateTime" required>
+                </div>
+
+                <div class="insurance">
+                    <label for="insured">Страхування</label>
+                    <input type="radio" id="insured" name="insured" value="insured"> застрахований
+                    <input type="radio" id="not-insured" name="insured" value="not-insured"> не застрахований
+
+                </div>
+
+                <!-- Коментар -->
+                <div class="comment">
+                    <label for="comment">Коментар до прийому</label>
+                    <textarea id="comment" name="comment" placeholder="Додайте свій коментар"></textarea>
+                </div>
+
+                <!-- Кнопки -->
+                <div class="buttons">
+                    <button type="submit" id="agree">Записатись</button>
+                    <button type="reset" id="disagree">Скасувати</button>
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Оформлення заявки на прийом</p>
+        </footer>
+        <!--модальне вінко-->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h1>Деталі запису</h1>
+                <div id="modal-body"></div>
+                <div class="modal-actions">
+                    <button id="confirm-data" class="modal-button">Так, правильно</button>
+                    <button id="edit-data" class="modal-button">Змінити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

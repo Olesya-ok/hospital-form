@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.wrapper-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://img.freepik.com/free-photo/dna-genetic-biotechnology-science-with-scientist-rsquo-s-hands-disruptive-technology-remix_53876-126745.jpg?t=st=1732826761~exp=1732830361~hmac=21c0f2d1779afd718f85b748488434237fe32a0ea3dde7c5afb2406e0338a014&w=996);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 800px;
+}
+.header {
+    text-align: center;
+    color: darkblue;
+}
+
+.bid-lastname, .bid-firstname, .bid-surname, .genus, .birthdate, .service, .datevisit, .comment, .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label{
+    font-size: 12px;
+    color: #051b32;
+}
+
+.data {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#agree, #disagree{
+    color: #18b2ff;
+    background-color: darkblue;
+    border-radius: 10px;
+    padding: 5px;
+    width: 45%;
+}
+
+.footer p{
+    color: darkblue;
+    padding: 10px;
+}
+
+.modal {
+    display: none; /* Скрываем окно по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Чтобы было выше других элементов */
+
+
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-image: url("https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-equipment_23-2149611201.jpg?uid=R172460231&ga=GA1.1.574194826.1727612452&semt=ais_hybrid");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#confirm-data {
+    background-color: #20209a;
+    color: white;
+}
+
+#edit-data {
+    background-color: #600800;
+    color: white;
+}
