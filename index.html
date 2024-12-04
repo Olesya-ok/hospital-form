@@ -21,13 +21,15 @@
                 <!-- Прізвище -->
                 <div class="bid-lastname">
                     <label for="lastname">Прізвище</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Введіть своє прізвище" required>
+                    <input type="text" id="lastname" name="lastname" placeholder="Введіть своє прізвище" required
+                           title="Це поле обов'язкове для заповнення">
                 </div>
 
                 <!-- Ім'я -->
                 <div class="bid-firstname">
                     <label for="firstname">Ім'я</label>
-                    <input type="text" id="firstname" name="firstname" placeholder="Введіть своє ім'я" required>
+                    <input type="text" id="firstname" name="firstname" placeholder="Введіть своє ім'я" required
+                           title="Це поле обов'язкове для заповнення">
                 </div>
 
                 <!-- Побатькові -->
@@ -38,26 +40,27 @@
 
                 <!-- Стать -->
                 <div class="data">
-                    <div class="genus">
-                        <label for="genus">Стать</label>
-                        <select name="gender" id="genus" required>
-                            <option name="gender" value="male">Чоловіча</option>
-                            <option name="gender" value="female">Жіноча</option>
-                        </select>
-
+                    <div>
+                        <label>Оберіть стать</label>
+                        <div class="data">
+                            <label><input type="radio" name="genus" value="Чоловік" required> Чоловік</label>
+                            <label><input type="radio" name="genus" value="Жінка" required> Жінка</label>
+                        </div>
                     </div>
 
                     <!-- Дата народження -->
                     <div class="birthdate">
                         <label for="birthdate">Дата народження</label>
-                        <input type="date" id="birthdate" name="birthdate" required>
+                        <input type="date" id="birthdate" name="birthdate" required
+                               title="Це поле обов'язкове для заповнення">
                     </div>
                 </div>
 
                 <!-- Оберіть лікаря -->
                 <div class="service">
                     <label for="doctor">Оберіть лікаря</label>
-                    <select name="doctor" id="doctor" required>
+                    <select name="doctor" id="doctor" required title="Це поле обов'язкове для заповнення">
+                        <option value="" disabled selected>Оберіть лікаря</option>
                         <option value="neurologist">Невропатолог</option>
                         <option value="surgeon">Хірург</option>
                         <option value="lor">ЛОР</option>
@@ -70,16 +73,26 @@
                 <!-- Дата та час прийому -->
                 <div class="datevisit">
                     <label for="visitDateTime">Дата та час прийому</label>
-                    <input type="datetime-local" id="visitDateTime" name="visitDateTime" required>
+                    <input type="datetime-local" id="visitDateTime" name="visitDateTime" required
+                           title="Це поле обов'язкове для заповнення">
                 </div>
 
                 <div class="insurance">
                     <label for="insured">Страхування</label>
-                    <input type="radio" id="insured" name="insured" value="insured"> застрахований
+                    <input type="radio" id="insured" name="insured" value="insured" required
+                           title="Це поле обов'язкове для заповнення"> застрахований
                     <input type="radio" id="not-insured" name="insured" value="not-insured"> не застрахований
 
                 </div>
 
+                <div class="insuredNmb">
+                    <label for="insuredNmb">Введіть номер страхування</label>
+                    <input type="text" id="insuredNmb" name="insuredNmb"
+                           pattern="^\d{8}-[a-zA-Z-а-яА-Я]{2}$"
+                           title="Формат: 8 цифр, тире, 2 букви (наприклад, 12345678-AB)"
+                           placeholder="12345678-АВ"
+                           maxlength="11">
+                </div>
                 <!-- Коментар -->
                 <div class="comment">
                     <label for="comment">Коментар до прийому</label>
@@ -101,7 +114,6 @@
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span id="close-modal" class="close">&times;</span>
-                <h1>Деталі запису</h1>
                 <div id="modal-body"></div>
                 <div class="modal-actions">
                     <button id="confirm-data" class="modal-button">Так, правильно</button>
@@ -109,6 +121,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
 <script src="main.js"></script>
