@@ -12,37 +12,37 @@
     let insuredNmb = document.getElementById('insuredNmb');
 
     function validateRequiredFields() {
-        let isValid = true; // Флаг для отслеживания валидности всех полей
+        let isValid = true;
 
         // Проверка радиокнопок "Стать"
-        let genusGroup = form.elements["genus"]; // Группа радиокнопок "Стать"
+        let genusGroup = form.elements["genus"];
         let isGenusSelected = Array.from(genusGroup).some(radio => radio.checked);
-        let genusContainer = document.querySelector('.data'); // Контейнер для радиокнопок "Стать"
+        let genusContainer = document.querySelector('.data');
         if (!isGenusSelected) {
             isValid = false;
-            genusContainer.style.outline = "2px solid red"; // Добавляем обводку вокруг группы
+            genusContainer.style.outline = "2px solid red";
         } else {
-            genusContainer.style.outline = ""; // Убираем обводку, если выбран хотя бы один
+            genusContainer.style.outline = "";
         }
 
         // Проверка радиокнопок "Страхование"
-        let insuranceGroup = form.elements["insured"]; // Группа радиокнопок "Страхование"
+        let insuranceGroup = form.elements["insured"];
         let isInsuranceSelected = Array.from(insuranceGroup).some(radio => radio.checked);
-        let insuranceContainer = document.querySelector('.insurance'); // Контейнер для радиокнопок "Страхование"
-        if (!isInsuranceSelected) {
+        let insuranceContainer = document.querySelector('.insurance');
+            if (!isInsuranceSelected) {
             isValid = false;
-            insuranceContainer.style.outline = "2px solid red"; // Добавляем обводку вокруг группы
+            insuranceContainer.style.outline = "2px solid red";
         } else {
-            insuranceContainer.style.outline = ""; // Убираем обводку, если выбран хотя бы один
+            insuranceContainer.style.outline = "";
         }
 
         // Проверка остальных обязательных полей
         form.querySelectorAll('[required]').forEach(field => {
             if (!field.value) {
                 isValid = false;
-                field.style.borderColor = "red"; // Подсветка пустого поля
+                field.style.borderColor = "red";
             } else {
-                field.style.borderColor = ""; // Убираем подсветку, если поле заполнено
+                field.style.borderColor = "";
             }
         });
 
@@ -123,7 +123,7 @@
                 modalBody.appendChild(p);
             }
 
-            // Показываем модальное окно
+
             modal.classList.add('active');
         }
     });

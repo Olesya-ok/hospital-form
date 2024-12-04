@@ -60,8 +60,8 @@ label{
     gap: 10px;
 }
 .data, .insurance {
-    outline: none; /* Убираем стандартный outline */
-    transition: outline 0.3s; /* Плавный переход */
+    outline: none;
+    transition: outline 0.3s;
 }
 
 
@@ -86,7 +86,7 @@ label{
 }
 
 #modal {
-    display: none; /* Модальное окно скрыто по умолчанию */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -95,12 +95,12 @@ label{
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Обеспечиваем, чтобы оно отображалось поверх других элементов */
+    z-index: 1000;
 }
 
 #modal.active {
     display: flex;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
     width: 100%;
